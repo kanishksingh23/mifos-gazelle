@@ -301,7 +301,7 @@ curl -X POST http://message-gateway.<GAZELLE_DOMAIN>/smsbridges \
   -H 'Content-Type: application/json' \
   -H 'Fineract-Platform-TenantId: <tenant>' \
   -H 'Fineract-Tenant-App-Key: <app key>' \
-  -d '{"phoneNo":"+10000000000","providerName":"Dummy","providerKey":"Dummy","countryCode":"1"}'
+  -d '{"phoneNo":"+10000000000","providerName":"Dummy","providerKey":"Dummy","countryCode":"1","providerDescription":"Dummy demo provider"}'
 ```
 
 No real SMS or email provider credentials are configured in Gazelle, so nothing leaves the cluster: the Dummy provider sets the delivery status from the message body. Configuring a live provider is a deployment-time decision, not something Gazelle presumes.
